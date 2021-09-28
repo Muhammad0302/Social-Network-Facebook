@@ -1,0 +1,64 @@
+.rightbar{
+    flex: 3.5;
+}
+.rightbar__wrapper{
+    padding: 20px 20px 0 20px;
+}
+.rightbar__bdImg{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.rightbar__bdText{
+    font-weight: 300;
+    font-size: 15px;
+}
+.rightbar__ad{
+    width: 100%;
+    border-radius: 10px;
+}
+.rightbar__friendList{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.rightbar__title{
+    margin-bottom: 20px;
+}
+.rightbar__title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.rightbar__followingImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.rightbar__info{
+    margin-bottom: 30px;
+}
+.rightbar__infoItem{
+    margin-bottom: 10px;
+}
+.rightbar__infoKey{
+    font-weight: 500;
+    margin-right: 15px;
+    color: #555;
+}
+.rightbar__infoValue{
+    font-weight: 300;
+}
+.rightbar__followings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.rightbar__following{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
