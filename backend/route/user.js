@@ -42,9 +42,13 @@ router.delete("/:id",async(req,res)=>{
 })
 
 //get a user
-router.get("/:id",async(req,res)=>{
+router.get("/",async(req,res)=>{
+    // Point to be noted
+    const userId = req.query.userId;
+    const username = req.query.username
      try{
-         const user =  await User.findById(req.params.id)
+         const user = userId ? await User.findById(userId)
+         : await User.findOne({username: username})
          //You will get all document except these two attributes password/updatedAt
           const {password,updatedAt, ...other} = user._doc
       

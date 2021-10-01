@@ -3,11 +3,12 @@ import Online from '../Online/Online'
 import './rightbar.css'
 import {Users} from '../../dummyData'
 import Profile from '../../pages/profile/Profile'
-function Rightbar({profile}) {
-  const Rightbar__home = () =>{
+function Rightbar({user}) {
+//    console.log(user)
+    const Rightbar__home = () =>{
       return (
           <>
-                         <div className="rightbar__bdContainer">
+              <div className="rightbar__bdContainer">
                 <img className="rightbar__bdImg" src="assets/gift.png" alt="" />
                 <span className="rightbar__bdText">
                     <b>Pola Foster</b> and <b>three other friends</b> have a birthday today
@@ -34,15 +35,15 @@ function Rightbar({profile}) {
              <div className="rightbar__info">
              <div className="rightbar__infoItem">
                  <span className="rightbar__infoKey">City: </span>
-                 <span className="rightbar__infoValue">Pakistan</span>
+                 <span className="rightbar__infoValue">{user.city}</span>
              </div>
              <div className="rightbar__infoItem">
                  <span className="rightbar__infoKey">From: </span>
-                 <span className="rightbar__infoValue">Lower Dir kpk</span>
+                 <span className="rightbar__infoValue">{user.from}</span>
              </div>
              <div className="rightbar__infoItem">
                  <span className="rightbar__infoKey">Relationship: </span>
-                 <span className="rightbar__infoValue">Single</span>
+                 <span className="rightbar__infoValue">{user.relationship == 1 ? "Single" : user.relationship == 2 ? "Maried" : "-"}</span>
              </div>
              </div>   
              <h4 className="rightbar__title">User friends</h4>
@@ -75,7 +76,7 @@ function Rightbar({profile}) {
         <div className="rightbar">
            <div className="rightbar__wrapper">
              {/* <Rightbar__home /> */}
-             {profile ? <Rightbar__profile /> : <Rightbar__home /> }
+             {user ? <Rightbar__profile /> : <Rightbar__home /> }
              
            </div>
         </div>

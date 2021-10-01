@@ -5,14 +5,16 @@ import './toolBar.css'
 // icons. Remove Icon word from each icon importing
 
 import {Search,Person,Chat,Notifications} from '@material-ui/icons';
-
+import {Link} from 'react-router-dom'
 // import Search from '@material-ui/icons/Search';
 // import PersonIcon from '@material-ui/icons/Person';
 function TopBar() {
     return (
         <div className="topBar__container">
            <div className="topBar__left">
+               <Link to="/" style={{textDecoration: 'none'}}>
                <div className="topbar__log">Social Network</div>
+               </Link>
             </div>
             <div className="topBar__center">
                 <div className="topBar__searchbar">

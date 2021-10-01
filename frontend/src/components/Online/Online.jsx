@@ -1,7 +1,7 @@
 import React from 'react'
 import './online.css'
 function Online({user}) {
-    console.log(user)
+    // console.log(user)
     return (
         <div>
                  <li className="rightbar__friend">
